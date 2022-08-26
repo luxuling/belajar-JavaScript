@@ -1,4 +1,4 @@
-HALO BRE DISINI GUA CUMA MAU UPLOAD PROJECT"/CATATAN GUE SAAT BELAJAR JAVASCRIPT
+HALO BRE DISINI SAYA CUMA MAU UPLOAD PROJECT"/CATATAN SAYA SAAT BELAJAR JAVASCRIPT
 ENJOY READING.....
 <!---
 luxuling/luxuling is a ✨ special ✨ repository because its `README.md` (this file) appears on your GitHub profile.
