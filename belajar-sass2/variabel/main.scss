@@ -1,0 +1,40 @@
+$mainColor:blue;
+$seconColor:red;
+$bgColor:black;
+
+body{
+  background-color: $bgColor;
+  .box1{
+    background-color: $mainColor;
+    text-align: center;
+    p{
+      color: white;
+    }
+  }
+  .box2{
+    background-color: $seconColor;
+    text-align: center;
+    p{
+      color: white;
+    }
+  }
+}
+//map 
+$info:(
+  "warning": orange,
+  "danger": red,
+  "success": green,
+);
+
+.info {
+  width: 400px;
+  height: 400px;
+  h1{
+    color: white;
+  }
+  .infoColor{
+    width: 100px;
+    height: 50px;
+    background-color: map-get($info , "danger" );
+  }
+}

@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title></title>
+</head>
+
+<body>
+<script>
+  function getProduct(){
+    const request = new Request("producto.json",{
+      method:"GET"
+    })
+    const response = fetch(request)
+    return response.then((res)=>res.json())
+  }
+  function getNameProduct(){
+    return new Promise(function(resolve, reject){
+      getProduct()
+          .then((response)=>{
+            resolve(response.name)
+          })
+          .catch((err)=>{
+            resolve("product not found")
+          })
+
+    })
+  }
+  getNameProduct()
+    .then((ress)=>console.log(ress))
+    
+    
+  //async
+  
+async function getNameProductAsync(){
+    try{
+      const product = await getProduct()
+      return product.name
+    }catch(err){
+      return "product not found"
+    }
+  }
+  getNameProductAsync()
+    .then((ress)=>console.log(ress))
+</script>
+</body>
+
+</html>

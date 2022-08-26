@@ -1,0 +1,360 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title></title>
+</head>
+
+<body>
+<script>
+  
+//materi lanjutan 
+//NUMBER
+  
+// let num = "12345"
+// console.log(num)
+// console.log(typeof num)
+// let number = Number(num)
+// console.log(number)
+// console.log(typeof number)
+
+// //static properties
+  
+//   console.log(Number.MAX_VALUE)
+//   console.log(Number.MIN_VALUE)
+//   console.log(Number.MIN_SAFE_INTEGER)
+//   console.log(Number.MAX_SAFE_INTEGER)
+//   console.log(Number.NaN)
+//   console.log(Number.prototype)
+  
+// //static method
+//   let satu = Number("qqsssdsdsd")
+//   console.log(Number.isNaN(satu))
+//   console.log(Number.isInteger(satu))
+  
+// //instance method
+// let dua = Number("12334")
+//   console.log(dua.toString())
+//   console.log(dua.toLocaleString("id-ID"))
+  
+  
+//STRING
+
+// let name = "eko kurniawan khannedy"
+// console.log(name.toUpperCase())
+// console.log(name.toLowerCase())
+// console.log(name.split(" "))
+// let person = "      toni      "
+// console.log(person.trim())
+
+//ARRAY
+
+//iterasi menggunakan forEach()
+
+// const arr = ["kucing","harimau","naga","tuntong"]
+// arr.forEach(function (value, index){
+//   console.log(`${index} : ${value}`)
+// })
+
+// arr.forEach((value)=> console.log(value))
+
+//ARRAY QUEUE (ANTRIAN)
+// const arr = []
+// //untuk menambah antrian dari belakang gunakan push()
+// arr.push("faruq")
+// arr.push("taqi")
+// arr.push("ayyub")
+// //untuk mengeluarkan antrian yg paling depan gunakan shift
+// console.log(arr.shift())
+// console.log(arr.shift())
+// console.log(arr.shift())
+// console.log(arr)
+
+//ARRAY STACK (TUMPUKAN) SIFAT: LAST IN FIRST OUT
+
+// const arr = []
+// //untuk menambah antrian dari belakang gunakan push()
+// arr.push("faruq")
+// arr.push("taqi")
+// arr.push("ayyub")
+// //untuk mengeluarkan antrian yg paling depan gunakan pop()
+// console.log(arr.pop())
+// console.log(arr.pop())
+// console.log(arr.pop())
+// console.log(arr)
+
+//ARRAY SEARCH
+// const arr = [1,2,3,4,5,6,7,8,9,1,2,3,4,5,6,7,8]
+// console.log(arr.find(value => value > 3))
+// console.log(arr.findIndex(value => value > 3))
+// console.log(arr.includes(10))
+// console.log(arr.indexOf(9))
+// console.log(arr.lastIndexOf(8))
+
+
+//ARRAY FILTER
+// const arr = [1,2,3,4,5,6,7,8,9,10]
+// const genap = arr.filter(value => value % 2 == 0)
+// console.log(genap)
+// const ganjil = arr.filter(value => value % 2 == 1)
+// console.log(ganjil)
+
+//ARRAY TRANSFORM
+// const nama = ["antoni","saputra"]
+// console.log(nama.map(value => value.toUpperCase()))
+// const namaS = nama.reduce((before, value) => before + " " + value)
+// console.log(namaS)
+// const namaRight = nama.reduceRight((before, value) => before + " " + value)
+// console.log(namaRight)
+
+// const number = [1,2,3,4,5,6,7,8,9,10,11,22,33,44,55]
+// const sum = number.reduce((before, value)=> before+value)
+// console.log(sum)
+
+//OBJECT 
+
+//FREEZE (tidak bisa di rubah,pindah,dan hapus) & SEAL(bisa dirubah tidak bisa di hapus dan di tambah) 
+
+// const person = {
+//   firstName: "antoni",
+//   lastName : "saputra"
+// }
+
+// //Object.freeze(person)
+// Object.seal(person)
+
+// person.firstName = "budi"
+// delete person.lastName
+// console.log(person)
+
+//OBJECT ASSIGN
+
+// const target = {
+//   firstName : "antoni"
+// }
+// const sorce = {
+//   firstName : "budi",
+//   lastName : "saputra"
+// }
+
+// Object.assign(target, sorce)
+// console.log(target)
+// console.log(sorce)
+
+//OBJECT GET PROPERTY & VALUES
+
+// const person = {
+//   firstName : "antoni",
+//   lastName : "saputra"
+// }
+// console.log(Object.getOwnPropertyNames(person))
+// console.log(Object.values(person))
+
+//JSON
+
+// const person = {
+//   firstName : "antoni",
+//   lastName : "saputra",
+//   privat : {
+//     hoby : "makan",
+//     nomor : 049
+//   }
+  
+// }
+
+// const json = JSON.stringify(person);
+// console.log(json)
+// const backObj = JSON.parse(json)
+// console.log(backObj)
+
+
+//BIGINT
+
+// const a = BigInt(Number.MAX_SAFE_INTEGER)
+// const b = BigInt(Number.MAX_SAFE_INTEGER)
+
+// const c = a + b
+// console.log(c)
+
+// console.log(typeof c)
+
+//DATE
+
+// const date1 = Date()
+// console.log(date1)
+// const date2 = Date(2022,06,22)
+// console.log(date2)
+// const date3 = Date(2022,06,22,22,22,22,1211)
+// console.log(date3)
+
+// const date4 = Date(1656513868981)
+// console.log(date4)
+
+
+//DATE epoch unix timestamp
+
+
+// const date1 = Date()
+// console.log(date1.getTime())
+// const date2 = Date(2022,06,22)
+// console.log(date2.getTime())
+// const date3 = Date(2022,06,22,22,22,22,1211)
+// console.log(date3.getTime())
+
+// const date4 = Date(1656513868981)
+// console.log(date4.getTime())
+// const now = Date.now()
+
+//DATE parsing
+
+// const date = Date.parse("2022-02-22T22:22:22.122")
+// console.log(date)
+
+//DATE SETTER GETTER  
+
+// const date = new Date()
+// date.setFullYear(2022)
+// console.log(date.getFullYear())
+// console.log(date.getMonth())
+// console.log(date.getDate())
+// console.log(date.getHours())
+// console.log(date.getMinutes())
+// console.log(date.getSeconds())
+// console.log(date.getMilliseconds())
+// console.log(date.getTimezoneOffset())
+
+//MAP (seperti object namun key nya bisa apa saja)
+
+// let person = new Map()
+
+// person.set(1211, "ssddsdsd")
+// person.set(true, "ssddsdsd")
+// person.set("dsdsd", "ssddsdsd")
+
+// person.delete(1211)
+// console.log(person.get(true))
+
+// person.forEach(function(value, key){
+//   console.log(`${key}:${value}`)
+// })
+
+//set 
+
+// let person = new Set()
+
+// person.add("sds")
+// person.add(true)
+// person.add(21213)
+
+// person.forEach(function(value){
+//   console.log(value)
+// })
+
+//symbol
+// let umur = new Symbol("umur")
+// let name = new Symbol("name")
+// let person = {}
+// person[name] = "wew"
+// person[umur] = 121
+// console.log(person)
+
+
+//RegExp
+
+// let perempuan = "good looking, goood rekening, bad boy, fuck boy,"
+// let lahKita = /kontol brutal/i
+// let orangLain = /good looking/i
+// let diTerima = "perempuan: iya aku mau jadi pacar kamu"
+// let diTolak = "perempuan: maaf kayaknya kita temenan aja"
+
+
+// function protBrutal() {
+//   perempuan = perempuan.replace(/good looking/ig, "kontol brutal")
+//   diTerima = "perempuan: AH AH AH AH CEPEETTT MASUKIINN"
+// }
+
+// function confess(person){
+//   if(person.exec(perempuan)){
+//     alert(diTerima)
+//   }else{
+//     alert(diTolak)
+//   }
+// }
+// protBrutal()
+// confess(lahKita)
+
+
+//PROXY
+
+// let target = {}
+
+// let handler = {
+//   get :function(target, property){
+//     console.log(`anda mengambil property: ${property}`)
+//     return target[property]
+//   },
+//   set :function(target, property, value){
+//     console.log(`anda mengganti property: ${property} dengan ${value}`)
+//     target[property] = value
+//   }
+// }
+
+
+// let antoni = new Proxy(target, handler)
+// antoni.nama = "antoni saputra"
+// antoni.hobi = "coding"
+// console.log(antoni.nama)
+
+
+//reflect 
+
+// let person = {}
+
+// Reflect.set(person, "nama", "adadeh")
+// Reflect.set(person, "umur", 12)
+
+// console.log(Reflect.has(person, "nama"))
+
+
+//encode 
+// {
+//   const url = "http://www.nekopoi.care/jav=adadeeh adad dd"
+//   console.log(url)
+//   const encoded = encodeURI(url)
+//   console.log(encoded)
+  
+//   const decoded = decodeURI(encoded)
+//   console.log(decoded)
+// }
+
+// {
+//   const url = "http://www.nekopoi.care/jav="
+//   console.log(url)
+//   const encoded = encodeURIComponent("adadeeh&adad=dd&")
+//   console.log(url+encoded)
+  
+//   const decoded = decodeURIComponent(encoded)
+//   console.log(url+decoded)
+// }
+
+//Base64
+
+// const original = "$antoni=saputra%"
+
+// const encoded = btoa(original)
+// console.log(encoded)
+
+// const decoded = atob(encoded)
+// console.log(decoded)
+
+//eval not recomended
+// const script = `alert("kamu di hack")`
+
+// eval(script)
+
+</script>
+</body>
+
+</html>

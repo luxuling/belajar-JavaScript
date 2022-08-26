@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>worker</title>
+</head>
+
+<body>
+<button type="submit" id="btn">lest goo</button>
+<script>
+  const worker = new Worker("render.js")
+  
+  worker.addEventListener("message", function(message){
+    console.log(message.data)
+  })
+  document.getElementById("btn").onclick = function(){
+    worker.postMessage(1000)
+  }
+</script>
+</body>
+
+</html>

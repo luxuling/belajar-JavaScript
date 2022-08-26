@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>callback</title>
+</head>
+
+<body>
+  <h2 id="h2"></h2>
+<script>
+//serTimeOut()
+  function cetakHallo(){
+  const h1 = document.createElement("h1")
+  h1.innerText = "hello world"
+  document.body.append(h1)
+  }
+  setTimeout(cetakHallo, 5000)
+
+//setInterval()
+function cetakTanggal(){
+  const h2 = document.getElementById("h2")
+  h2.innerText = new Date().toString()
+  document.body.append(h2)
+}
+setInterval(cetakTanggal, 1000)
+
+</script>
+
+</body>
+
+</html>

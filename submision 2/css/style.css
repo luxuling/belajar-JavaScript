@@ -1,0 +1,211 @@
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans&family=Kanit:wght@300&family=Lexend+Deca:wght@300&family=Montserrat:wght@500&family=Ubuntu&display=swap');
+:root {
+  --pink : #F6C6EA;
+  --white : #F9F9F9;
+}
+*{
+  padding: 0;
+  margin: 0;
+  font-family: 'Montserrat', sans-serif;
+  box-sizing: border-box;
+}
+body{
+  background: var(--white);
+}
+main{
+  width: 100%;
+  height: 100vh;
+}
+header{
+  width: 100%;
+  height: 50px;
+  background-color: var(--pink);
+  text-align: center;
+  color: white;
+  text-transform: uppercase;
+  outline: none;
+  border-bottom-right-radius: 50px;
+  border-top-left-radius: 50px;
+}
+header h1{
+  padding-top: 5px;
+}
+.main-page{
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+}
+.search-box{
+  margin-top: 30px;
+  outline: none;
+  padding: 10px 40px;
+  border-radius: 30px;
+  display: flex;
+  justify-content: flex-end;
+}
+#search{
+  padding: 10px 35px;
+  margin-right: auto;
+  background: transparent;
+  border: none;
+}
+.shadow {
+  box-shadow: 0 5px 10px rgba(154, 160, 185, .05), 0 15px 40px rgba(166, 173, 201, .2);
+}
+.button-search{
+  color: var(--pink);
+  background: transparent;
+  border: none;
+  cursor: pointer;
+}
+.search-result{
+  background: transparent;
+  height: 200px;
+  width: 300px;
+  margin-top: 20px;
+  border-radius: 10px;
+}
+.add-book{
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  height: 100vh;
+}
+.box{
+  width: 33%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+}
+.form-add form{
+  display: flex;
+  flex-direction: column;
+  margin-top: 30%;
+}
+.add-book h1{
+  text-align: center;
+  text-transform: uppercase;
+  color: var(--pink);
+  padding: 7px 30px;
+  border-bottom: 3px solid var(--pink);
+}
+.form-add input:nth-child(1) {
+  padding: 9px 20px;
+  border: 1px solid var(--pink);
+  border-radius: 30px;
+  background: transparent;
+  text-align: center;
+  box-shadow: 0 10px 10px rgba(154, 160, 185, .05), 0 15px 40px rgba(166, 173, 201, .2);
+  transition: 0.4s ease-in-out;
+}
+.form-add input:nth-child(2){
+  margin-top: 10px;
+  padding: 9px 20px;
+  border: 1px solid var(--pink);
+  border-radius: 30px;
+  background: transparent;
+  text-align: center;
+  box-shadow: 0 10px 10px rgba(154, 160, 185, .05), 0 15px 40px rgba(166, 173, 201, .2);
+  transition: 0.4s ease-in-out;
+}
+::placeholder{
+  color: var(--pink);
+}
+#checkbox{
+  align-self: center;
+  background: transparent;
+  border: 1px solid var(--pink);
+}
+.form-add input:hover{
+  transform: scale(1.1);
+}
+.form-add p{
+  text-align: center;
+  color: var(--pink);
+  font-size: 1em;
+  margin-top: 10px;
+}
+.form-add #date{
+  text-align: center;
+  margin-top: 10px;
+  height: 40px;
+  width: 70px;
+  align-self: center;
+  background: transparent;
+  border: 1px solid var(--pink);
+  border-radius: 20px;
+  cursor: pointer;
+  box-shadow: 0 10px 10px rgba(154, 160, 185, .05), 0 15px 40px rgba(166, 173, 201, .2);
+  transition: 0.4s ease-in-out;
+}
+.readed-item{
+  height: 80%;
+  width: 100%;
+  margin-top: 8px;
+  border-radius: 20px;
+  overflow: scroll;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.form-add button{
+  margin-top: 10px;
+  height: 35px;
+  width: 150px;
+  border-radius: 20px;
+  background: #FAF4B7;
+  align-self: center;
+  cursor: pointer;
+  border: none;
+  color: var(--pink);
+  text-transform: uppercase;
+  transition: 0.4s ease-in-out;
+}
+.form-add button:hover{
+  transform: scale(1.1);
+  filter: saturate(2);
+}
+.readed-box{
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+.read-item{
+  height: 80%;
+  width: 100%;
+  margin-top: 8px;
+  border-radius: 20px;
+  overflow-y: scroll;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.read-box{
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+.lil-card{
+  padding: 20px 0px;
+  width: 90%;
+  height: 100px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 10px;
+  border-radius: 20px;
+}
+.lil-card .str{
+  align-items: center;
+  margin-left: 10px;
+  width: 180px;
+}
+.btn{
+  margin-left: 50px;
+}
+.btn span{
+  cursor: pointer;
+  color: var(--pink);
+  font-size: 30px;
+}

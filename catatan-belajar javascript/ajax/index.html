@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>AJAX</title>
+</head>
+
+<body>
+  <h1 id="content"></h1>
+<script>
+  function displayAjax(json){
+    const content = document.getElementById("content")
+    content.innerText = json.sayHai
+  }
+
+  const ajax = new XMLHttpRequest()
+  ajax.open("GET", "JSON/hello.json")
+  //menerima/mengambil ajax
+  ajax.addEventListener("load", function(){
+    if(ajax.status === 200){
+      const json = JSON.parse(ajax.responseText)
+      displayAjax(json)
+    }else{
+      displayAjax({
+        sayHai : `terjadi kesalahan pada kode ${ajax.status}`
+      })
+    }
+  })
+  
+  //state
+  ajax.addEventListener("readystatechange", ()=> console.log(ajax.readyState))
+  
+  ajax.send()
+</script>
+</body>
+
+</html>

@@ -1,0 +1,82 @@
+@mixin navbar {
+  padding: 0;
+  margin: 0;
+  height: 50px;
+  width: 100%;
+  background-color: dimgrey;
+    ul{
+      list-style: none;
+      display: flex;
+      padding: 15px;
+      justify-content: space-evenly;
+        li{
+          background-color: orange;
+          transition: 0.5s ease-out;
+          a{
+            text-decoration: none;
+            color: white;
+            &:hover{
+              background-color: yellow;
+              color: black;
+            }
+          }
+        }
+    }
+}
+
+.navbar{
+  @include navbar()
+}
+
+@mixin flex-direction($direct:row){
+  height: 500px;
+  width: 100%;
+  display: flex;
+  background-color: grey;
+  align-items: center;
+  justify-content: space-evenly;
+  & &-item{
+    background-color: orange;
+    height: 50px;
+    width: 150px;
+    display: flex;
+    justify-content: space-evenly;
+    flex-direction: $direct;
+    text-align: center;
+    p{
+      color: red;
+    }
+  }
+}
+.box{
+  @include flex-direction();
+}
+
+@mixin foot {
+  padding: 0;
+  margin: 0;
+  height: 50px;
+  width: 100%;
+  background-color: dimgrey;
+    ul{
+      list-style: none;
+      display: flex;
+      padding: 15px;
+      justify-content: space-evenly;
+        li{
+          background-color: orange;
+          transition: 0.5s ease-out;
+          a{
+            text-decoration: none;
+            color: white;
+            &:hover{
+              background-color: yellow;
+              color: black;
+            }
+          }
+        }
+    }
+}
+.footer{
+  @include foot();
+}

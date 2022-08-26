@@ -1,0 +1,82 @@
+@mixin profile($besar,$warna,$sircle:false){
+  width: $besar;
+  height: $besar;
+  border: 5px solid $warna;
+  @if $sircle {
+    border-radius: 0;
+  }@else{
+    border-radius: 50%;
+  }
+}
+.sircle{
+  @include profile(100px,grey)
+}
+.box{
+  @include profile(200px,grey,true)
+}
+
+//if,else if,else 
+
+@mixin triangel($posisi, $color){
+  height: 0;
+  width: 0;
+  border-width: 2em;
+  background-color: transparent;
+  border-color: transparent;
+  border-style: solid;
+  @if $posisi == up{
+    border-bottom-color: $color;
+  }@else if $posisi == down{
+    border-top-color: $color;
+  }@else if $posisi == right{
+    border-left-color: $color;
+  }@else{
+    border-right-color: $color;
+  }
+}
+
+.triangel{
+  @include triangel(up,black);
+}
+
+ //for;
+@mixin gradientfor($color){
+  width: 100%;
+  @for $i from 1 to 11 {
+    li:nth-child(#{$i}) {
+      background-color: lighten($color,$i * 3%);
+    }
+  }
+} 
+//while
+$color: red;
+@mixin gradientWhile(){
+  width: 100%;
+  $i: 1;
+  @while $i < 11 {
+    li:nth-child(#{$i}) {
+      background-color: lighten($color,$i * 3%);
+    }
+    $i: $i+1;
+  }
+} 
+
+.list{
+  @include gradientWhile();
+}
+
+//each
+$socilColor:(
+  youtube:red,
+  facebook:blue,
+  instagram:purple,
+  tiktok:black,
+  twitter: blue,
+);
+.social{
+  @each $social,$color in $socilColor {
+    .#{$social}{
+        color: $color;
+    }
+  }
+}

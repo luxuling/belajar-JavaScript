@@ -1,0 +1,1117 @@
+<!DOCTYPE html>
+<html lang="in">
+<head>
+				<meta charset="UTF-8">
+				<title>catatan belajar di udemy</title>
+</head>
+<body>
+				<script>
+								
+								//belajar Object
+
+// const orang = {}
+
+// orang["nama"]= "Antoni Saputra"
+// orang["umur"]=19
+
+// console.log(orang)
+
+// const orang2 = {
+//   "nama lengkap":"tidak tau",
+//   umur: 60
+// }
+// console.log(orang2)
+
+//belajar if  
+/*
+  let value =30
+  if(value>10){
+    document.writeln(`<p>${value}</p>`)
+  }
+  
+  const examValue= 80
+  if(examValue>90){
+    document.writeln("<p>very good</p>")
+  }else if (examValue >70){
+    document.writeln("<p>good</p>")
+  }else{
+    document.writeln("<p>jelek</p>")
+  }
+  */
+  
+  //pop up 
+  /*
+  const nama = prompt("siapa nama anda:")
+  alert(`hello ${nama}`)
+  
+  let masuk = confirm("yakin mau masuk:")
+  if(masuk= true){
+    alert("oke")
+  }else{
+    alert("tol")
+  }
+  */
+  //undefined
+  
+  // let name
+  // if(name === undefined){
+  //   console.log('undefined')
+  // }
+  /*
+  //Null
+  let Null = null
+  if(Null === null){
+    alert(Null)
+  }else{
+    alert(false)
+  */
+  
+  
+  /*
+  
+  let nama = "tol"
+  
+  switch (nama) {
+    case "tid":
+      alert('bbi')
+      break;
+    case "tol":
+      alert("embg bes")
+      break;
+    default:
+      alert("cuih")
+  }
+  
+  //type of
+  
+  let string = "abcd"
+  let tipe = typeof(string)
+  console.log(tipe);
+  
+  //operator in
+  
+  let data = {
+  
+  "nama":"antoni"
+}
+		 if("nama" in data){
+		 				console.log(data["nama"]);
+		 }else{
+		 				console.log("ga ada");
+		 }
+								
+*/
+								
+//ternary operation
+// 				let angka = 9
+// 				let hasil = angka >10 ? "true":"false"
+// 				console.log(hasil);
+				
+// //optional chaining
+// 				let orangTua = {
+// 								    asal : {
+// 												lokasi : "jogja"
+// 								}
+								
+// 				}
+				
+// 				let lokasi = orangTua?.asal?.lokasi
+// 				console.log(lokasi);
+				
+// //nullis coalacing
+
+//   let hem = undefined
+//   let b = hem ?? "bisa"
+//   console.log(b);
+  
+  
+// //operator logika non boolian
+
+// console.log("0" || 0);
+// console.log("bisa" || "true");
+// console.log("" || false);
+// console.log("" && 0);
+// console.log("false" && 0);
+// console.log(0 && "true");
+
+// for loop
+
+// for(let i = 1 ; i <=10; i++){
+// 				//document.writeln(`<p>${i}</p>`)
+// }
+
+//while loop
+// let a = 1
+// while(a <= 10){
+// 				//document.writeln(`<p>${a}</p>`)
+// 				a++
+				
+// }
+
+//do while
+// let x = 1
+// do {
+   // document.writeln(`<p>${x}</p>`)
+//     x++
+
+// }while(x<=10)
+//break 
+
+// for(let h = 1; h <= 10 ;h++){
+//   // document.writeln(`<p>${h}</p>`)
+// 				if(h==6){
+// 			//	break
+// 				}
+// }
+
+//continue
+
+// for(let z = 1;z <=10;z++){
+// 				if (z % 2 == 1) {
+// 								continue
+// 				}
+// 			//	document.writeln(`<p>${z}</p>`)
+// }
+
+//label 
+/*
+peng1:
+for(let xi =1; xi <= 10 ;xi++){
+				peng2:
+				for (let ix = 1;ix <=10;ix++) {
+								document.writeln(`<p>${xi}  ${ix}</p>`)
+								if (xi==5) {
+												break peng1
+								}
+				}
+}
+*/
+//for in for of
+/*
+const pipi = {
+				key : "value",
+				pap : "cantik",
+				love : "weeknes"
+}
+
+for(const kunci in pipi){
+				document.writeln(`<p>${kunci}</p>`)
+}
+
+const aku = ["heartbreek","axienty","weekness"]
+
+for(let isi of aku ){
+				document.writeln(`<p>${isi}</p>`)
+}
+*/
+
+//with operation
+/*
+const aku = {
+				key : "value",
+				pap : "cantik",
+				love : "weeknes"
+}
+
+with(aku){
+				document.writeln(`<p>${key}</p>`)
+				document.writeln(`<p>${pap}</p>`)
+				document.writeln(`<p>${love}</p>`)
+}
+
+*/
+//function 
+/*
+function namaNya() {
+				document.writeln(`<p>namanya</p>`)
+}
+
+namaNya();
+*/
+//function parameter
+/*
+function cetakNama(depan, belakang){
+				document.writeln(`<p>${depan} ${belakang}</p>`)
+}
+cetakNama("me and","you")
+*/
+
+//function return value 
+/*
+function gabung(depan,belakang){
+				hasil = depan + belakang
+			return hasil
+}
+
+let hasilAkhir = gabung("kmu","aku")
+document.writeln(`<p>${hasilAkhir}</p>`)
+*/
+
+//optional parameter 
+/*
+function unliPara(satu,dua,tiga){
+document.writeln(`<p>${satu}, ${dua}, ${tiga}</p>`)
+}
+
+unliPara("satu")
+unliPara("satu","dua")
+unliPara("satu","dua","tiga")
+unliPara("satu","dua","tiga","empat")
+
+*/
+
+//devault parameter
+/*
+ function sapa(nama, alamat,agama="islam"){
+   document.writeln(`hallo ${nama} yg di ${alamat},dan beragama ${agama}`)
+ }
+ sapa("anton","jogja")
+ */
+ // rest parameter 
+ /*
+  function tangkap(nama, alamat, agama, ...lainya){
+    console.log(nama , alamat, agama, ...lainya)
+    
+  }
+ let address = ["munggang","lor","samigaluh"]
+  tangkap("naj", "hh","islaam",address)
+ 
+*/
+ 
+ //function sebgai value
+ /*
+ function sayHello(nama){
+   console.log(`haloo ${nama}`)
+ }
+ 
+ let say = sayHello
+ 
+ function giveMe(a){
+   a("anton")
+ }
+ 
+ giveMe(sayHello)
+ giveMe(say)
+ */
+ //annonymus function
+ /*
+ let ano = function(){
+  
+  console.log("annonymus") 
+   
+ }
+ ano()
+ */
+ //function dalam function 
+ /*
+ function tambah (nama,usia){
+   let hasil = nama + usia
+          function cetak(){
+            document.writeln(`<p>${hasil}</p>`)
+          }
+    cetak()      
+ }
+ 
+ 
+ tambah("anton",50)
+ */
+ //scoop
+ 
+// let global = "iniglobal"
+ 
+// function cetak(para){
+   
+//   let local = "inilokal"
+//   document.writeln(`<p>${para}</p>`)
+// }
+ 
+// cetak(global)
+// cetak(lokal)
+
+//factorial function
+
+//mengguakan for
+
+// function faktor(value){
+//   let result = 1;
+//   for(let l = 1;l <= value;l++){
+//     result *= l
+//   }
+//   return result
+// }
+
+// console.log(faktor(6))
+
+// function faktorial(value){
+      
+//       if(value === 1){
+//         return 1
+//       }else{
+//         return value * faktorial(value - 1)
+//       }
+// }
+// console.log(faktorial(6))
+
+// function generator 
+
+// function* names(){
+//   yield "anton"
+//   yield "wp"
+//   yield "ayyub"
+// }
+
+// let name = names()
+// for(let data of name){
+//   console.log(data)
+// }
+
+
+// function* buatGanjil(angka){
+//   for(let i = 1; i <= angka; i++){
+//     if(i % 2 == 1){
+//       console.log(`yield ${i}`)
+//       yield i
+//     }
+//   }
+// }
+
+// let hasil = buatGanjil(50)
+// for(let data of hasil){
+//   console.log(data)
+// }
+
+// console.log(hasil.next().value)
+// console.log(hasil.next().value)
+
+//arrow function 
+
+// let cetak = (nama) => {
+//   document.writeln(nama)
+// }
+
+// cetak("anton")
+
+
+// let pendek = (nama) => document.writeln(nama)
+
+// pendek("wp")
+
+// let ringkas = nama => document.writeln(nama)
+
+// ringkas("taqi")
+
+
+// function getName(callback){
+//   callback("malik")
+// }
+
+// getName(name => console.log(name))
+
+//closer
+
+// function createAdd(value){
+//   let owner = "wp"
+//   function add(param){
+//     console.log(owner)
+//     return value + param
+//   }
+//   return add
+// }
+
+// let  add = createAdd(20)
+// function addTwo(param){
+//   console.log(owner)
+//   return 20 + param 
+// }
+
+// console.log(add(10))
+
+// functon method 
+// let person = {
+//   nama : "wp",
+//   sayHello : function (){
+//     console.log(`hallo ${person.nama} `)
+    
+//   }
+// }
+
+// person.sayHello()
+
+// person.sapa = function (){
+//   alert("haloooo")
+// }
+// console.log(person)
+// person.sapa()
+
+//this
+
+// let person ={
+//   nama : "taqi",
+//   pacar : "saudah",
+//   mantan : "ayyub",
+//   masaLalu : function(){
+//     alert(`dulu dimasa itu ${this.nama} ngent sama ${this.mantan}`)
+//   }
+// }
+
+// person.masaLalu()
+
+//arow function di object
+
+// let obj = {
+//   nama : "anton",
+//   cetak :() => {
+//     alert(`halloo ${obj.nama}`)
+//   }
+// }
+
+
+// obj.cetak()
+
+//getter di object
+
+// let data = {
+//   firsName : "antoni",
+//   lastName : "saputra",
+//   get combine(){
+//     console.log(`${this.firsName} ${this.lastName} `)
+//   },
+//   //setter
+//   set ubahFull(value){
+//     let arr = value.split(" ")
+//     this.firsName = arr[0]
+//     this.lastName = arr[1]
+//   }
+// }
+
+// //problem kita harus mengubah value satu" 
+// data.combine
+// data.firsName = "taqi"
+// data.combine
+
+// //setter soluainya
+// data.ubahFull="anton rizki"
+
+// data.combine
+
+
+//destructuring untuk ambil data array 11
+
+// let arr = ["ayyub","taqi","wp","malik","anton","aku","azca","faruq"]
+// const [satu,dua,tiga,empat,lima, ...other] = arr
+
+// console.log(satu)
+// console.log(dua)
+// console.log(tiga)
+// console.log(other)
+
+// //kalo di object
+
+// let person = {
+//   nama :"taqi",
+//   mantan1 : "ayyub",
+//   mantan2 : "saudah",
+//   alamat : {
+//     kota : "klaten",
+//     rumah : "perumahan"
+//   },
+//   hoby : "main cwk",
+//   status: "jones"
+// }
+
+// // let {nama,mantan1,mantan2, ...address} = person
+// // console.log(nama)
+// // console.log(mantan1)
+// // console.log(mantan2)
+// // console.log(address)
+
+// //kalau di nested object
+
+
+// let {nama,mantan1,mantan2,alamat:{kota,rumah}} = person
+// console.log(nama,mantan1,kota)
+
+// {
+//   //ketika di function 
+//   //di object
+//   let data = {
+//     namaD : "antoni",
+//     namaB : "saputra"
+//   }
+//   function cetak({namaD,namaB} = data){
+//     console.log(namaD)
+//     console.log(namaB)
+//   }
+//   cetak()
+  
+//   //di array
+//   function tambah([a,b]){
+//     console.log(a+b)
+//   }
+//   tambah([10,10])
+// }
+
+// //default value in destruction
+// {
+//   //in object
+//   let obj = {
+//     nama : "antoni",
+//     alamat : "jogja",
+//   }
+//   let {nama, alamat, hobby = "kill"} = obj
+//   console.log(nama)
+//   console.log(hobby)
+
+// //in array
+// let arr = ["antoni","jogja",]
+// let [satu,dua,tiga = "makima"] = arr
+// console.log(satu)
+// console.log(tiga)
+
+// }
+
+// //mengganti atribut saat menggunkan destruction di obj
+// {
+//   let obj ={
+//     nama : "anton",
+//     alamat : "klaten"
+//   }
+//   let {
+//     nama : jeneng,
+//     alamat: asal,
+//     hoby : kesukaan = "mancing"} = obj
+//   console.log(jeneng)
+//   console.log(asal)
+//   console.log(kesukaan)
+
+// }
+
+//strict mode
+//tidak suport with statement
+// function person(){
+//   "use strict"
+//   let data = {
+//     nama : "anton",
+//     alamat : "jogja"
+//   }
+//   with(data){
+//     console.log(nama,alamat)
+//   }
+// }
+// person()
+
+//debugger
+  
+// function fullName(firstName,midleName,lastName){
+//   debugger
+//   let full = `${firstName} ${midleName} ${midleName}`
+//   return full
+// }
+
+// let nama = fullName("antoni","saputra","wp")
+// console.log(nama)
+
+// function sum(...value){
+//   debugger;
+//   let data = 0 
+//   for(let angka of value){
+//     data += angka
+//   }
+//   return data
+// }
+
+// let hasil = sum(1,1,1,1,1,1)
+// console.log(hasil)
+
+//---OBJECT ORIANTED PROGRAMING----
+//membuat constructor function
+//diawali dengan uppercase
+// function Construc(){
+  
+// }
+
+// //cara memanggil 
+// let obj = new Construc()
+
+//property di class
+
+// function Create(){
+//   this.firstName = "",
+//   this.lastName  = ""
+// }
+
+// const eko = new Create()
+// eko.firstName = "eko"
+// eko.lastName = "khennedy"
+
+// console.log(eko)
+
+//sebenarnya cara menambah bisa lamgsung 
+//tapi untuk kekonsistenan jad di set pas di constructornya
+
+//method di oop
+
+// function Person(){
+//   this.nama = "",
+//   this.kelas = "",
+//   this.sayHello = function(nama){
+//     console.log(`hallo ${nama},nama saya ${this.nama}`)
+//   }
+// }
+
+
+// const anton = new Person()
+// anton.nama = "anton"
+// anton.kelas = "kuliah"
+
+// console.log(anton)
+// anton.sayHello("toni")
+
+//parameter di constructor function
+
+// function Person(namaDepan,namaBelakang){
+//   this.firstName = namaDepan,
+//   this.lastName = namaBelakang
+// }
+
+// const anton = new Person("anton","rizky")
+// console.log(anton)
+
+//constructor inheritance (copy property dari constructor lain)   
+
+// function Employee(firstName, lastName){
+//   this.firstName = firstName,
+//   this.lastName = lastName,
+//   this.sayHello = function(nama){
+//     console.log(`hai ${nama} nama saya ${this.firstName}`)
+//   }
+// }
+
+// function Admin(firstName, lastName){
+//   this.firstName = firstName,
+//   Employee.call(this, firstName,lastName)
+// }
+// //!!constructor yang manggil harus punya parameter yg dipannggil
+// const wp = new Admin("roihan", "wp")
+// console.log(wp)
+
+//prototype di constructor
+
+// function Ayyub(namaDepan, namaBelakang, cewek){
+//   this.firstName = namaDepan,
+//   this.lastName = namaBelakang,
+//   this.cewek = cewek,
+//   this.sayHello = function(){
+//     console.log(`hallo nama saya ${this.firstName}`)
+//   }
+// }
+// Ayyub.prototype.loskon = function(){
+//   console.log(`maaf ya ${this.cewek}, kita kayak-nya harus loskont deh :( `)
+// }
+
+// let ayyub = new Ayyub("ayyub","abdulhaq","piah")
+// ayyub.loskon()
+
+//pewarisan yang benar di prototype
+
+// function Employee(nama){
+//   this.nama = nama
+// }
+
+// function Manager(nama){
+//   this.nama = nama
+// }
+
+
+
+//Manager.prototype = Employee.prototype //ini salah
+//harusnya
+// Manager.prototype = Object.create(Employee.prototype)
+
+// Employee.prototype.sayHello = function(nama){
+//   console.log(`halo nama saya employee ${this.nama}, hallo ${nama} `)
+// }
+// Manager.prototype.sayHello = function(nama) {
+//   console.log(`halo nama saya manager ${this.nama}, hallo ${nama} `)
+// }
+
+// let employee = new Employee("toni")
+// employee.sayHello("taqi")
+
+// let manager = new Manager("taqi")
+// manager.sayHello("toni")
+
+// console.log(employee)
+// console.log(manager)
+
+//OOP class (ini yang dipakai saat ini)
+
+// class Person{
+//   nama = "" 
+// }
+
+// Person.prototype.sayHello = function(){
+  
+// }
+
+// let person = new Person()
+// console.log(person)
+
+//contructor di class
+
+// class Person{
+  
+// constructor (nama){
+//   console.log(nama)
+// }
+// }
+
+// let budi = new Person("budi")
+
+// property di class
+// class Person{
+//   constructor (name, umur){
+//     this.umur = umur,
+//     this.name = name
+//   }
+// }
+
+// let taqi = new Person("taqi",20)
+// taqi.mantan = "saudah"
+// console.log(taqi)
+
+//method di class
+
+// class Person{
+  
+//   constructor (nama){
+//     this.nama = nama
+//     //kalo method dimasukan ke sini maka method nya masuk ke intence object
+//   }
+//   //disarankan seperti ini agar dia masuk ke prototype
+//   sayHello(nama){
+//     console.log(`hallo ${nama}, my name is ${this.nama}`)
+//   }
+// }
+
+// let ayyub = new Person("ayyub")
+// ayyub.sayHello("taqi")
+// console.log(ayyub)
+
+//pewarisan di class
+
+// class Employee{
+//   sayHello(nama){
+//     console.log(`hallo ${nama} saya employee ${this.nama}`)
+//   }
+// }
+
+// class Manager extends Employee{
+//   sayHello(nama) {
+//     console.log(`hallo ${nama} saya manager ${this.nama}`)
+//   }
+// }
+
+// let toni = new Employee()
+// toni.nama = "toni"
+// toni.sayHello("taqi")
+
+// let taqi = new Manager()
+// taqi.nama = "taqi"
+// taqi.sayHello("toni")
+
+// console.log(toni)
+// console.log(taqi)
+
+//super constructor(wajib di panggil ketika bikin constructor di child pewarisan)
+
+// class Employee{
+//   constructor(firstName, lastName){
+//     this.firstName = firstName,
+//     this.lastName = lastName
+//   }
+  
+//   sayHello(nama){
+//     console.log(`hallo ${nama} saya employee ${this.nama}`)
+//   }
+// }
+
+
+// class Manager extends Employee{
+//   constructor(firstName, lastName){
+//     super(firstName),
+//     this.lastName = lastName
+//   }
+//   sayHello(nama){
+//     console.log(`hallo ${nama} saya manager ${this.nama}`)
+//   }
+// }
+
+// let manager = new Manager("eko", "budi")
+// console.log(manager)
+
+//super method
+// class Penikung{
+//   constructor(nama){
+//     this.nama = nama
+//   }
+//   rayuSkill(korban){
+//     confirm(`${this.nama} :assalamualaikum,maaf nih ${korban} aku ganggu ya?`)
+//   }
+// }
+
+// class Korban extends Penikung{
+  
+//   constructor(nama){
+//     super(nama)
+//     this.nama = nama
+//   }
+//   tulul(nama){
+//   // super.rayuSkill() // ini jika mau panggi method
+//     alert(`${this.nama} :iya ga pp kok ${nama}, ga ada yg keganggu kok`)
+//   }
+// }
+
+// let ayyub = new Penikung("ayyub")
+// ayyub.rayuSkill("piah")
+
+// let piah = new Korban("piah")
+// piah.tulul("ayyub")
+
+// piah.rayuSkill("ayyub") // ini jjika mau pangil method parent
+
+//getter setter
+
+
+// class Person{
+//   constructor(firstName, lastName){
+//     this.firstName = firstName,
+//     this.lastName = lastName
+//   }
+//   get fullName(){
+//     return `${this.firstName}  ${this.lastName}`
+//   }
+//   set fullName(value){
+//     let arr = value.split(" ")
+//     this.firstName = arr[0]
+//     this.lastName = arr[1]
+//   }
+// }
+
+// let ayang = new Person("ayyub", "abdulhaq")
+// console.log(ayang.fullName)
+// ayang.fullName = "antoni saputra"
+// console.log(ayang)
+
+//Pubic field di class
+
+// class Person{
+//   firtsName
+//   lastName
+//   ballance = 0
+//   constructor(firstName, lastName){
+//     this.firtsName = firstName,
+//     this.lastName = lastName
+//   }
+//   hello(){
+//     console.log("haaaiiiiiii")
+//   }
+// }
+
+
+// let ayyub = new Person("ayyub", "abdulhaq")
+// console.log(ayyub)
+
+//privat field di class
+// class Counter{
+//   #counter = 0
+  
+//   increment(){
+//     this.#counter++
+//   }
+//   decrement(){
+//     this.#counter++
+//   }
+//   get(){
+//     return this.#counter
+//   }
+// }
+
+// let counter = new Counter
+// counter.increment()
+// counter.increment()
+// counter.increment()
+// counter.increment()
+// counter.increment()
+// counter.increment()
+
+// console.log(counter.get())
+
+//privat method
+// class Person{
+  
+//   say(name){
+//     if(name){
+//       this.sayWithName(name)
+//     }else{
+//       this.#sayWithoutName()
+//     }
+//   }
+  
+//   #sayWithoutName(){
+//     console.log("haaaaaiii")
+//   }
+//   sayWithName(name){
+//     console.log(`haiii ${name}`)
+//   }
+// }
+
+// const ayyub = new Person()
+// ayyub.say("ayyub")
+
+//instanceof 
+// class Employee{
+//   constructor(name){
+//     this.name = name
+//   }
+// }
+// class Manager extends Employee{
+//   constructor(name){
+//     super(name)
+//     this.name = name
+//   }
+// }
+
+// let taqi = new Employee("taqi")
+// let budi = new Manager("budi")
+
+// console.log(budi instanceof Employee)
+// console.log(budi instanceof Employee)//kenapa true karna dia turunan dari empployee
+
+//static field (field nya bukan milik intstance tertentu,melainkkan milik class trsbt)
+// class Configuration{
+//   static nama = "alat vital"
+//   versi = "terbaru"
+// }
+// let conf = new Configuration()
+
+// console.log(conf.nama)//undefined
+// console.log(Configuration.nama)
+
+//static method
+
+// class MathUtil{
+//   static sum(...numbers){
+//     let value = 0
+//     for(let number of numbers){
+//       value += number
+//     }
+//     return value
+//   }
+// }
+// console.log(MathUtil.sum(1,1,1,1,1))
+
+//throw error
+// class MathUtl{
+//   static sum(...numbers){
+//     if(numbers.length === 0 ){
+//       throw new Error("masukan nilai lebih dari 0")
+//     }else{
+//       let value = 0 
+//       for(let number of numbers){
+//         value += number
+//       }
+//       return value
+//     }
+    
+//   }
+// }
+
+
+// console.log(MathUtl.sum())
+
+// error handling 
+
+// class MathUtl{
+//   static sum(...numbers){
+//     if(numbers.length === 0 ){
+//       throw new Error("masukan nilai lebih dari 0")
+//     }else{
+//       let value = 0 
+//       for(let number of numbers){
+//         value += number
+//       }
+//       return value
+//     }
+
+//   }
+// }
+//try catch
+// try{
+//   console.log(MathUtl.sum())
+  
+// }catch(error){
+//   console.log(`terjadi error : ${error.message}`)
+// }
+// console.log("baris selanjutnya")
+//finally
+// try{
+//   console.log(MathUtl.sum())
+// }catch(error){
+//   console.log(`error pada : ${error.message}`)
+// }finally{
+//   console.log("akhirnya")
+// }
+
+//try finally
+// class Number{
+//   #number = 1
+//   next(){
+//     try{
+//       return this.#number = this.#number
+//     }finally{
+//       return this.#number++
+//     }
+//   }
+// }
+
+// let num = new Number()
+// console.log(num.next())
+// console.log(num.next())
+// console.log(num.next())
+// console.log(num.next())
+// console.log(num.next())
+
+//membuat class error 
+// class Validation extends Error{
+//   constructor(message,field){
+//     super(message)
+//     this.field = field
+//   }
+// }
+
+
+// class MathUtl{
+//   static sum(...numbers){
+//     if(numbers.length === 0 ){
+//       throw new Validation("masukan nilai lebih dari 0", "number")
+//     }else{
+//       let value = 0 
+//       for(let number of numbers){
+//         value += number
+//       }
+//       return value
+//     }
+
+//   }
+// }
+
+// try{
+//   console.log(MathUtl.sum())
+// }catch(error){
+//   console.log(`terjadi error di ${error.field},solusi : ${error.message}`)
+// }
+
+				</script>
+</body>
+</html>

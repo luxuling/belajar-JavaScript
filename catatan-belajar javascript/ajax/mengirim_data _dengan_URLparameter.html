@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title></title>
+</head>
+
+<body>
+<form>
+  <label for="search">
+    <input type="text" name="" id="search">
+  </label>
+  <input type="button" value="search" id="searchBtn">
+</form>
+<h1 id="content"></h1>
+<script>
+  function toSearch(){
+    const ajax = new XMLHttpRequest()
+    const param = new URLSearchParams()
+    const searcValue = document.getElementById("search").value
+    
+    param.append("search", searcValue)
+    param.append("filter", searcValue)
+    
+    console.log(typeof param)
+    ajax.open("POST", `https://bubububub.free.beeceptor.com?${param.toString()}`)
+    
+    ajax.addEventListener("load", ()=>{
+      const content = document.getElementById("content")
+      content.innerText = ajax.responseText
+    })
+    ajax.send()
+  }
+  const searchBtn = document.getElementById("searchBtn")
+  searchBtn.addEventListener("click", (event)=>{
+    event.preventDefault()
+    toSearch()
+  })
+</script>
+</body>
+
+</html>

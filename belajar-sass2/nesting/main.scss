@@ -1,0 +1,24 @@
+$mainColor:grey;
+$seconColor: red;
+
+.main{
+  .container & {
+    width: 500px;
+    height: 500px;
+    background-color: $mainColor;
+  }
+  & &-header{
+    background-color: $seconColor;
+    text-align: center;
+    h1{
+      color: yellowgreen;
+    }
+  }
+  & &-content{
+    background-color: blue;
+    text-align: center;
+    p{
+      color: orange;
+    }
+  }
+}

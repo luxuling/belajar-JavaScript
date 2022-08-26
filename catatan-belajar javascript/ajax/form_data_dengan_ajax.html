@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title></title>
+</head>
+
+<body>
+<form>
+  <label for="username">username
+    <input type="text" id="username">
+  </label>
+  
+  <label for="password">password
+    <input type="password" id="password">
+  </label>
+  
+  <input type="submit" value="login" id="login">
+</form>
+<h1 id="content"></h1>
+<script>
+  function toLogin(){
+    const ajax = new XMLHttpRequest()
+    ajax.open("POST","https://bubububub.free.beeceptor.com")
+    
+    ajax.addEventListener("load", ()=>{
+      const content = document.getElementById("content")
+      content.innerText = ajax.responseText
+    })
+    const form = new URLSearchParams()
+    form.append("username", document.getElementById("username").value,)
+    form.append("password", document.getElementById("password").value)
+    
+    ajax.setRequestHeader("content-Type", "application/x-www-form-urlencoded")
+    ajax.send(form)
+  }
+  
+  const login = document.getElementById("login")
+  login.addEventListener("click", (event)=>{
+    event.preventDefault()
+    toLogin()
+  })
+</script>
+</body>
+
+</html>

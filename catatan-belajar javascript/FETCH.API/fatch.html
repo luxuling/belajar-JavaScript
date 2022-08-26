@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title></title>
+</head>
+
+<body>
+   <label for="username">username
+     <input type="text" id="username">
+   </label>
+  
+   <label for="password">password
+     <input type="password" id="password">
+   </label>
+  
+   <input type="submit" value="login" id="login">
+   </form>
+   <h1>ok?:<span id="status"></span></h1>
+   
+   <script>
+      function doLogin(){
+        const request = new Request("https://eos8g132rt3z7wu.m.pipedream.net", {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json",
+            "Accept": "application/json"
+          },
+          body: JSON.stringify({
+            username : document.getElementById("username").value,
+            password : document.getElementById("password").value
+           })
+        })
+        const response = fetch(request)
+        response
+            .then((response)=>{
+              document.getElementById("status").innerText = response.ok
+            })
+      }
+      
+      document.getElementById("login").onclick = doLogin
+   </script>
+</body>
+
+</html>

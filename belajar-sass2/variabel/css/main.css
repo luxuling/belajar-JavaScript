@@ -1,0 +1,32 @@
+body {
+  background-color: black;
+}
+body .box1 {
+  background-color: blue;
+  text-align: center;
+}
+body .box1 p {
+  color: white;
+}
+body .box2 {
+  background-color: red;
+  text-align: center;
+}
+body .box2 p {
+  color: white;
+}
+
+.info {
+  width: 400px;
+  height: 400px;
+}
+.info h1 {
+  color: white;
+}
+.info .infoColor {
+  width: 100px;
+  height: 50px;
+  background-color: red;
+}
+
+/*# sourceMappingURL=main.css.map */

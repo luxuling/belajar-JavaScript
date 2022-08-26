@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title></title>
+</head>
+
+<body>
+<form>
+  <label for="username">username:
+    <input type="text" name="" id="username">
+  </label>
+  <br>
+  <label for="name">name:
+    <input type="text" name="" id="name">
+  </label>
+  <br>
+  <label for="profile">profile:
+    <input type="file" name="" id="profile">
+  </label>
+  <br>
+  <input type="button" value="register" id="register">
+</form>
+<br>
+<h1 id="status"></h1>
+<script>
+  
+  function register(){
+    const ajax = new XMLHttpRequest()
+    ajax.open("POST", "https://bubububub.free.beeceptor.com")
+    ajax.onload = ()=>{
+      const status = document.getElementById("status")
+      status.textContent = ajax.responseText
+    }
+    
+    const form = new FormData()
+    form.append("username", document.getElementById("username").value)
+    form.append("name", document.getElementById("name").value)
+    const profile = document.getElementById("profile").files
+    form.append("profile", profile.item(0))
+    
+    ajax.send(form)
+    
+  }
+  const registerBtn = document.getElementById("register")
+  registerBtn.addEventListener("click", (e)=>{
+    e.preventDefault()
+    register()
+  })
+</script>
+</body>
+
+</html>

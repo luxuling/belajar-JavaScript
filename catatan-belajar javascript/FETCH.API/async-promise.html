@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title></title>
+</head>
+
+<body>
+<script>
+  function returnString(){
+    return new Promise(function(resolve, reject){
+     resolve("true")
+    })
+      
+  }
+  returnString()
+    .then((value)=>console.log(value))
+  //async
+  async function returnStringAsync(){
+    return "true"
+  }
+  returnString()
+    .then((value)=>console.log(value))
+</script>
+</body>
+
+</html>

@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>promise</title>
+</head>
+
+<body>
+<script>
+  const promise = new Promise(function(resolve, reject){
+    const ajax = new XMLHttpRequest()
+    ajax.open("GET", "JSON/product.json")
+    ajax.onload = ()=>{
+      if (ajax.status === 200) {
+        resolve(console.log(ajax.responseText))
+      }else{
+        reject(console.log(`error karena status code ${ajax.status}`))
+      }
+    }
+    ajax.send()
+  })
+  
+</script>
+</body>
+
+</html>

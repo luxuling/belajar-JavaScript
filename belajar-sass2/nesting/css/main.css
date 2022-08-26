@@ -1,0 +1,21 @@
+.container .main {
+  width: 500px;
+  height: 500px;
+  background-color: grey;
+}
+.main .main-header {
+  background-color: red;
+  text-align: center;
+}
+.main .main-header h1 {
+  color: yellowgreen;
+}
+.main .main-content {
+  background-color: blue;
+  text-align: center;
+}
+.main .main-content p {
+  color: orange;
+}
+
+/*# sourceMappingURL=main.css.map */

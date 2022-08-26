@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title></title>
+</head>
+
+<body>
+<table border="0">
+  <tr>
+    <td>id:</td>
+    <td id="id"></td>
+  </tr>
+  <tr>
+    <td>name:</td>
+    <td id="name"></td>
+  </tr>
+  <tr>
+    <td>price:</td>
+    <td id="price"></td>
+  </tr>
+</table>
+
+<script>
+
+  function getProduct(url){
+    return new Promise(function(resolve, reject) {
+      const ajax = new XMLHttpRequest()
+      ajax.open("GET", `JSON/${url}`)
+      ajax.onload = () => {
+        if (ajax.status === 200) {
+          resolve(ajax.responseText)
+        } else {
+          reject(`error karena status code ${ajax.status}`)
+        }
+      }
+      ajax.send()
+    })
+  }
+  getProduct("productd.json")
+    .then(function(respon){
+      console.log(respon)
+      return JSON.parse(respon)
+    })
+    .then(function(parsed){
+      document.getElementById("id").textContent = parsed.id
+      document.getElementById("name").textContent = parsed.name
+      document.getElementById("price").textContent = parsed.price
+    })
+    .catch(function(err){
+      document.getElementById("id").textContent = err
+      document.getElementById("name").textContent = err
+      document.getElementById("price").textContent = err
+    })
+    .finally(function(){
+      console.log("end")
+    })
+</script>
+</body>
+
+</html>

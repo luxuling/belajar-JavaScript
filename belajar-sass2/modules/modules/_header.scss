@@ -1,0 +1,4 @@
+@use "mixin";
+.navbar{
+  @include mixin.navbar();
+}
